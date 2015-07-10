@@ -16,6 +16,12 @@ var checkNumbers = function(event) {
     results[input] = _.contains(lottos, input);
   });
 
+  if(results[0] && results[1]){
+    alert('Both are true!! i think you might have won!');
+  }else{
+    alert('You lose again. AGAIN!!');
+  }
+
   console.log("lottos: ", lottos);
   console.log("results: ", results);
 
