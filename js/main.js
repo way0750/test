@@ -4,7 +4,7 @@ var checkNumbers = function(event) {
 
   var input1 = event.target.form[0].value;
   var input2 = event.target.form[1].value;
-  var inputs = [input1, input2];
+  var inputs = [+input1, +input2];
 
   var lotto1 = Math.floor(Math.random() * 10);
   var lotto2 = Math.floor(Math.random() * 10);
@@ -21,7 +21,8 @@ var checkNumbers = function(event) {
   }else{
     alert('You lose again. AGAIN!!');
   }
-
+  
+  console.log(inputs);
   console.log("lottos: ", lottos);
   console.log("results: ", results);
 
