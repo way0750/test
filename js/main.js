@@ -6,7 +6,7 @@ var checkNumbers = function(event) {
   var input2 = event.target.form[1].value;
   
   // EDIT #1: coerce input1 and input2 into numbers
-  var inputs = [input1, input2];
+  var inputs = [+input1, +input2];
 
   var lotto1 = Math.floor(Math.random() * 10);
   var lotto2 = Math.floor(Math.random() * 10);
