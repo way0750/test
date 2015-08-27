@@ -4,7 +4,9 @@ var checkNumbers = function(event) {
 
   var input1 = event.target.form[0].value;
   var input2 = event.target.form[1].value;
-  var inputs = [+input1, +input2];
+  
+  // EDIT #1: coerce input1 and input2 into numbers
+  var inputs = [input1, input2];
 
   var lotto1 = Math.floor(Math.random() * 10);
   var lotto2 = Math.floor(Math.random() * 10);
@@ -19,11 +21,14 @@ var checkNumbers = function(event) {
   console.log("lottos: ", lottos);
   console.log("results: ", results);
 
+  // EDIT #2: add message to section#message based on whether or not user has guessed correctly
+
+
   $("#show-num").text(
     "The numbers were " + lotto1 +  " and " + lotto2 + ". " +
     inputs[0] + " was " + results[inputs[0]] + "; " +
     inputs[1] + " was " + results[inputs[1]]
-    );
+  );
 };
 
 $("#submit").click(function(event) {
