@@ -22,7 +22,13 @@ var checkNumbers = function(event) {
   console.log("results: ", results);
 
   // EDIT #2: add message to section#message based on whether or not user has guessed correctly
-  //wait do I need to know jquery for this?
+  
+
+$('#message').text(
+  'seriously what\'s going on???'
+  )
+
+
   $("#show-num").text(
     "The numbers were " + lotto1 +  " and " + lotto2 + ". " +
     inputs[0] + " was " + results[inputs[0]] + "; " +
